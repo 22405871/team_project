@@ -1,0 +1,116 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.navbar {
+  background: #111;
+  padding: 12px 16px;
+  display: flex;
+  gap: 14px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background: #2b2b2b;
+}
+
+.container { padding: 20px; max-width: 1100px; margin: 0 auto; }
+
+.hero {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card h3 { margin: 0 0 8px; }
+.card p { margin: 6px 0; color: #333; }
+
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.row > * { flex: 1; min-width: 140px; }
+
+label { display: block; font-size: 14px; margin: 10px 0 6px; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  outline: none;
+}
+
+textarea { min-height: 110px; resize: vertical; }
+
+.btn {
+  background: #111;
+  color: white;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover { opacity: 0.92; }
+
+.btn.secondary {
+  background: #6b6b6b;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin-top: 10px;
+}
+
+.table th, .table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.note { font-size: 13px; color: #555; margin-top: 8px; }
+.totalBox {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin-top: 12px;
+}
+.error { color: #b00020; font-size: 13px; margin-top: 8px; }
+
+.container img {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+}

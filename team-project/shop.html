@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop - TechNova</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="items.html">Items</a>
+  <a class="active" href="shop.html">Shop</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <h1>Online Shopping Form</h1>
+    <p>Checkout after filling payment information. Delivery is 10% if total ≤ $1000, otherwise free.</p>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Property</th>
+        <th>Units</th>
+        <th>Unit Price</th>
+        <th>Cost</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="basketBody"></tbody>
+  </table>
+
+  <div class="totalBox">
+    <p><b>Total items:</b> <span id="totalItems">0</span></p>
+    <p><b>Subtotal:</b> <span id="subtotal">$0.00</span></p>
+    <p><b>Final Total:</b> <span id="finalTotal">-</span></p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Payment</h3>
+
+      <form id="payForm" onsubmit="return false;">
+        <label>Payment Method</label>
+        <div class="row">
+          <label><input type="radio" name="paymentMethod" value="visa"> Visa</label>
+          <label><input type="radio" name="paymentMethod" value="master"> MasterCard</label>
+          <label><input type="radio" name="paymentMethod" value="paypal"> PayPal</label>
+        </div>
+
+        <label>Name on Card (4 fields, max 15 chars each)</label>
+        <div class="row">
+          <input id="card1" maxlength="15" placeholder="Name 1">
+          <input id="card2" maxlength="15" placeholder="Name 2">
+          <input id="card3" maxlength="15" placeholder="Name 3">
+          <input id="card4" maxlength="15" placeholder="Name 4">
+        </div>
+
+        <label>Expire Date</label>
+        <div class="row">
+          <select id="expMonth">
+            <option value="">Month</option>
+            <option value="1">01</option><option value="2">02</option><option value="3">03</option>
+            <option value="4">04</option><option value="5">05</option><option value="6">06</option>
+            <option value="7">07</option><option value="8">08</option><option value="9">09</option>
+            <option value="10">10</option><option value="11">11</option><option value="12">12</option>
+          </select>
+
+          <select id="expYear">
+            <option value="">Year</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+        </div>
+
+        <label>CVV (3 digits)</label>
+        <input id="cvv" inputmode="numeric" maxlength="3" placeholder="123">
+
+        <div class="row" style="margin-top:12px">
+          <button class="btn" type="button" onclick="checkout()">Checkout</button>
+          <button class="btn secondary" type="button" onclick="emptyCart()">Empty Cart</button>
+        </div>
+      </form>
+
+      <p class="note">Checkout shows confirmation message. OK = Thank you, Cancel = Application withdrawn.</p>
+    </div>
+
+    <div class="card">
+      <h3>How to add products?</h3>
+      <p>Go to <b>Items</b> page and use <b>Add to Basket</b>.</p>
+      <p class="note">Basket is stored in browser (localStorage) so it stays while you navigate pages.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

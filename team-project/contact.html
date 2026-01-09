@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - TechNova</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="items.html">Items</a>
+  <a href="shop.html">Shop</a>
+  <a class="active" href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <h1>Contact Us</h1>
+    <p>Fill name, surname and comments. All fields are validated.</p>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <form onsubmit="return validateContact()">
+      <label>Name</label>
+      <input id="c_name" placeholder="John">
+
+      <label>Surname</label>
+      <input id="c_surname" placeholder="Smith">
+
+      <label>Comments</label>
+      <textarea id="c_comments" placeholder="Write your message..."></textarea>
+
+      <div style="margin-top:12px">
+        <button class="btn" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
